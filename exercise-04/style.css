@@ -7,6 +7,9 @@
 
 section {
     width: 100vw;
+    justify-content: right;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .hero {
@@ -57,6 +60,7 @@ h1 {
     width: 80%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: right;
 
     /* margin: auto; is a fast way to center elements horizontally without using flexbox (though this doesn't work for vertical centering). */
     margin: auto;
@@ -65,11 +69,15 @@ h1 {
 article {
     flex: 1;
     padding: 3%;
+    width: 80%;
+    display: inline-flex;
+    flex-wrap: wrap;
 }
 
 
 .article-image {
     margin-bottom: 15px;
+    width: 100%;
 }
 
 img {
