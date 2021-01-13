@@ -123,8 +123,18 @@ h3 {
 }
 
 @media screen and (max-width: 768px) {
-    .hero-text-column, .hero-image-column, .articles {
+    .hero-text-column, .hero-image-column {
         width: 100%;
+    }
+
+@media screen and (max-width: 505px) {
+        .hero-text-column, .hero-image-column {
+            width: 100%;
+        }
+    .articles, .article {
+        margin-left: 10%;
+        margin-right
+
     }
 
     h3 {
