@@ -19,7 +19,7 @@ section {
 
 .hero-image-column {
     width: 100%;
-    background: url(cover.jpg) no-repeat center center;
+    background: url(img/cover.jpg) no-repeat center center;
     background-size: cover;
 
 }
@@ -56,11 +56,9 @@ h1 {
 }
 
 .hero-image-column {
-    background: url(img/cover.jpg)
-    no-repeat center center;
+    background: url(img/cover.jpg) no-repeat center center;
     background-size: cover;
 }
-
 .articles {
     width: 80%;
     display: flex;
@@ -73,7 +71,7 @@ h1 {
 
 article {
     flex: 1;
-    padding: 10%;
+    padding: 5%;
     width: 50%;
     display: flex;
     flex-wrap: wrap;
