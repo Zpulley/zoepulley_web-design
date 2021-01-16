@@ -1,0 +1,90 @@
+body {
+    width: 100vw;
+    background-color: black;
+    color: blue;
+    font-family: cursive;
+}
+div:first-child {
+    background-color: blue;
+    width: 60%;
+    font-size: 125px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10%; 
+
+    transform: skew(-15deg,-15deg);
+
+    color: black;
+    color: (255, 0, 0, 1);
+    transition-property: color;
+    transition-duration: 0.6s;
+    transition-timing-function:linear;
+    transition-delay: 0.2s;
+    }
+
+p {
+    width: 100;
+    font-size: 25px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10%; 
+}
+
+a {
+    animation-name: colors;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+
+p {
+    animation-name: lol;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+
+a:hover {
+    color: magenta;
+    transform: skew(-15deg);
+    transform: skewY(20deg);
+}
+
+@keyframes colors {
+    0% {
+    color:magenta;
+    }
+    30% {
+    color: blue;
+    }
+    60% {
+    color:magenta;
+    }
+    100% {
+    color: blue;
+    }
+
+
+
+}
+@keyframes lol {
+        from {
+        left: ;
+        }
+        to {
+        left: 50%;
+        }
+    
+       
+  
+    
+    
+
+
+

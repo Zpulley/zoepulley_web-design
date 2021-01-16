@@ -1,0 +1,431 @@
+/*fonts*/
+
+@font-face {
+    font-family: "DxSitrus-Expanded";
+    src: url(DxSitrus-Expanded.woff)format("woff");
+}
+@font-face {  
+    font-family: Lazord-BoldExpanded;
+    src: url(Lazord-BoldExpanded.woff)format(woff);
+
+}
+@font-face {  
+    font-family: Lazord-ExtraBold;
+    src: url(Lazord-ExtraBold.woff)format(woff);
+}
+@font-face {  
+    font-family: Lazord-RegularExpanded;
+    src: url(Lazord-RegularExpanded.woff)format(woff);
+}
+
+
+
+/*base*/
+
+body {
+    width: 100%;
+    height: 100%;
+    margin:0%;
+    background-color:white;
+    color: rgb(0, 0, 255);
+    font-family: Lazord-BoldExpanded;
+    font-size: 30px;
+}
+
+/*how can i move up the position? i tried top: value but it's not working */
+.headline {
+        font-family: "DxSitrus-Expanded";
+        font-size: 100px;
+        font-stretch: 65%%;
+        font-weight: bold;
+        text-align: center;
+        margin: auto;
+        top: -300px;
+        width: 100%;
+        height:fit-content;
+        letter-spacing: 5px;
+        text-transform: uppercase;  
+}
+
+/*there's probably a lot of unnecessary things here...just not sure what. Also not sure how I can change the color or my hyperlink underline*/
+:root {
+    --mainColor: rgba(248, 120, 1, 0.993);
+  }
+
+a {
+    background: linear-gradient(to bottom, var(--mainColor) 0%, var(--mainColor) 100%);
+      background-position: 0 100%;
+      background-repeat: repeat-x;
+      background-size: 0px 0px;
+    color: blue;
+    text-decoration: none;
+    
+  }
+  
+a:hover {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ff9800' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    background-position: 0 100%;
+    background-size: auto 20px;
+    background-repeat: repeat-x;
+    text-decoration: none;
+    color:rgba(248, 120, 1, 0.993);
+  }
+
+
+
+
+/*tickers (1-5)*/
+/*not sure why the speed is not consistent on the animations */
+/*ticker 1*/
+.tcontainer {
+    width: 100%;
+    overflow:hidden;
+    position: fixed;
+    margin: 0 auto;
+   
+}
+.ticker-wrap {
+    width: 100%;
+    height: 60px;
+    padding-left: 100%;
+    background-color: rgb(174, 248, 1);
+    margin: 0px;
+}
+.ticker-move {
+    display: inline-block;
+    white-space:nowrap;
+    padding-right: 100%;
+    animation-timing-function: linear;
+    animation: ticker 40s infinite;
+    animation-name: ticker;
+}
+@keyframes ticker {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+}
+.ticker-move:hover {
+    animation-play-state:paused;
+}
+.ticker-item {
+    display:-ms-inline-flexbox;
+    padding: 0 10px;
+    font-size: 30px;
+    width: 100%;
+    font-family: Lazord-BoldExpanded;
+    color: white;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+}
+
+/*ticker 2*/
+.tcontainer2 {
+    width: 100%;
+    overflow:hidden;
+    position: fixed;
+    margin: 0 auto;
+    transform: rotate(300deg) translateX(-600px); 
+}
+.ticker-wrap2 {
+    width: 100%;
+    height: 60px;
+    padding-left: 100%;
+    background-color: rgb(174, 248, 1);
+    margin: 0px;
+}
+.ticker-move2 {
+    display: inline-block;
+    white-space:nowrap;
+    padding-right: 100%;
+    animation-timing-function: linear;
+    animation: ticker 30s infinite;
+    animation-name: ticker2;
+}
+@keyframes ticker2 {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+}
+.ticker-move2:hover {
+    animation-play-state:paused;
+}
+.ticker-item2 {
+    display:-ms-inline-flexbox;
+    padding: 0 10px;
+    font-size: 30px;
+    width: 100%;
+    font-family: Lazord-BoldExpanded;
+    color: white;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;   
+}
+
+/*ticker 3*/
+.tcontainer3 {
+    width: 120%;
+    overflow:hidden;
+    position: fixed;
+    margin: 0 auto;
+    right: -70px;
+    top: 350px;
+    transform: rotate(-20deg) translate(80px);  
+}
+.ticker-wrap3 {
+    width: 100%;
+    height: 60px;
+    padding-left: 100%;
+    background-color: rgb(174, 248, 1);
+    margin: 0px;
+}
+.ticker-move3 {
+    display: inline-block;
+    white-space:nowrap;
+    padding-right: 100%;
+    animation-timing-function: linear;
+    animation: ticker 45s infinite;
+    animation-name: ticker3;
+}
+@keyframes ticker3 {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+}
+
+.ticker-move3:hover {
+    animation-play-state:paused;
+}
+.ticker-item3 {
+    display:-ms-inline-flexbox;
+    padding: 0 10px;
+    font-size: 30px;
+    width: 100%;
+    font-family: Lazord-BoldExpanded;
+    color: white;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+}
+
+/*ticker 4*/
+.tcontainer4 {
+    width: 120%;
+    overflow:hidden;
+    position: fixed;
+    margin: 0 auto;
+    left: 12px;
+    top: 300px;
+    transform: rotate(15deg) translate(-100px);  
+}
+.ticker-wrap4 {
+    width: 100%;
+    height: 60px;
+    padding-left: 100%;
+    background-color: rgb(174, 248, 1);
+    margin: 0px;
+}
+.ticker-move4 {
+    display: inline-block;
+    white-space:nowrap;
+    padding-right: 100%;
+    animation-timing-function: linear;
+    animation: ticker 45s infinite;
+    animation-name: ticker4;
+}
+@keyframes ticker4 {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+}
+
+.ticker-move4:hover {
+    animation-play-state:paused;
+}
+.ticker-item4 {
+    display:-ms-inline-flexbox;
+    padding: 0 10px;
+    font-size: 30px;
+    width: 100%;
+    font-family: Lazord-BoldExpanded;
+    color: white;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+}
+
+/*ticker 5*/
+.tcontainer5 {
+    width: 100%;
+    overflow:hidden;
+    position: fixed;
+    margin: 0 auto;
+    left: 0px;
+    top: 576px;
+    transform: rotate(0deg) translate(0px);  
+}
+.ticker-wrap5 {
+    width: 100%;
+    height: 60px;
+    padding-left: 100%;
+    background-color: rgb(174, 248, 1);
+    margin: 0px;
+}
+.ticker-move5 {
+    display: inline-block;
+    white-space:nowrap;
+    padding-right: 100%;
+    animation-timing-function: linear;
+    animation: ticker 40s infinite;
+    animation-name: ticker5;
+}
+@keyframes ticker5 {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+}
+
+.ticker-move5:hover {
+    animation-play-state:paused;
+}
+.ticker-item5 {
+    display:-ms-inline-flexbox;
+    padding: 0 10px;
+    font-size: 30px;
+    width: 100%;
+    font-family: Lazord-BoldExpanded;
+    color: white;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+}
+
+/*peach animations*/
+/*ideally i would like the peaches to rotate in a complete 360, but i can't figure out the math and now some of them don't*/
+
+.flex-container {
+    display: flex;
+    overflow: visible;
+    position: fixed;
+    
+}
+
+.grid-container {
+    display: grid;
+    margin-left: 250px;
+}
+
+.peach {
+      margin: auto;
+      overflow: visible;
+      width: 100vh;
+      overflow:auto;
+      margin-left: 100px;
+      position: absolute;
+      left: 350px;
+      top: 200px;
+      transform: rotate(180deg) translateX(400px);
+      -webkit-animation: peach 5s linear infinite;
+    }
+
+  @-webkit-keyframes peach {
+    from { -webkit-transform: rotate(0deg) translateX(300px) rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg) translateX(300px) rotate(-360deg); }
+}
+.smallpeach1 {
+      margin: auto;
+      text-align: left;
+      overflow: visible;
+      width: 100vh;
+      overflow:auto;
+      margin-left: 100px;
+      position: absolute;
+      left: 500px;
+      top: 200px;
+      transform: rotate(200deg) translateX(400px);
+      -webkit-animation: peachsmall 5s linear infinite;
+  }
+/*for some reason the peach animation stops running when I change the class to .smallpeach1 in @w-webkit-keyframes*/
+  @-webkit-keyframes peachsmall {
+    from { -webkit-transform: rotate(30deg) translateX(400px) rotate(330deg); }
+    to   { -webkit-transform: rotate(-330deg) translateX(400px) rotate(30deg); }
+}
+
+.medpeach {
+    margin: auto;
+    text-align: right;
+    overflow: visible;
+    width: 100vh;
+    overflow:auto;
+    margin-left: 100px;
+    position: absolute;
+    left: -500px;
+    top: 400px;
+    transform: rotate(20deg) translateX(400px);
+    -webkit-animation: peachsmall 4s linear infinite;
+}
+
+    @-webkit-keyframes medpeach {
+    from { -webkit-transform: rotate(0deg) translateX(300px) rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg) translateX(300px) rotate(-360deg); }
+}
+
+.onepeach {
+    margin: auto;
+    text-align: right;
+    overflow: visible;
+    width: 100vh;
+    overflow:auto;
+    margin-left: 100px;
+    position: absolute;
+    left: 500px;
+    top: 400px;
+    transform: rotate(20deg) translateX(400px);
+    -webkit-animation: peachsmall 4s linear infinite;
+}
+
+    @-webkit-keyframes onepeach {
+        from { -webkit-transform: rotate(deg) translateX(300px) rotate(0deg); }
+        to   { -webkit-transform: rotate(360deg) translateX(300px) rotate(-360deg); }
+    }
+
+.smallpeach2 {
+        margin: auto;
+        text-align: left;
+        overflow: visible;
+        width: 100vh;
+        overflow:auto;
+        margin-left: 100px;
+        position: absolute;
+        left: 800px;
+        top: 100px;
+        transform: rotate(200deg) translateX(400px);
+        -webkit-animation: peachsmall 6s linear infinite;
+}
+  
+    @-webkit-keyframes smallpeach2 {
+      from { -webkit-transform: rotate(0deg) translateX(400px) rotate(330deg); }
+      to   { -webkit-transform: rotate(-330deg) translateX(200px) rotate(30deg); }
+    }
+
+.twopeach {
+        margin: auto;
+        text-align: left;
+        overflow: visible;
+        width: 100vh;
+        overflow:auto;
+        margin-left: 100px;
+        position: absolute;
+        left: 600px;
+        top: 200px;
+        transform: rotate(300deg) translateX(100px);
+        -webkit-animation: peachsmall 5s linear infinite;
+}
+    @-webkit-keyframes twopeach {
+        from { -webkit-transform: rotate(25deg) translateX(300px) rotate(0deg); }
+        to   { -webkit-transform: rotate(360deg) translateX(300px) rotate(0deg); }
+    }
+
+
+    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+        /* Styles */
+        }
