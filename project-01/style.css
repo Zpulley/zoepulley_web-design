@@ -127,9 +127,9 @@ a:hover {
 .tcontainer2 {
     width: 100%;
     overflow:hidden;
-    position: fixed;
+    position:fixed;
     margin: 0 auto;
-    transform: rotate(300deg) translateX(-600px);
+    transform: rotate(300deg) translateX(-300px);
     max-width: 2000px; 
 }
 .ticker-wrap2 {
@@ -174,7 +174,7 @@ a:hover {
     margin: 0 auto;
     right: -70px;
     top: 350px;
-    transform: rotate(-20deg) translate(80px);  
+    transform: rotate(-20deg) translate(150px);  
     max-width: 2000px;
 }
 .ticker-wrap3 {
@@ -414,17 +414,72 @@ a:hover {
       to   { -webkit-transform: rotate(-330deg) translateX(200px) rotate(30deg); }
     }
 
-    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-        }
+@media only screen and (max-width: 1000px) {
+  .medpeach {
+    margin: auto;
+    text-align: auto;
+    width: 100vh;
+    height: 100vh;
+    overflow:auto;
+    position: auto;
+    transform: rotate(20deg) translateX(400px);
+    -webkit-animation: peachsmall 4s linear infinite;
+    font-size: 60%;
+  }
+}
 
-    @media only screen  and (min-width : 1224px) {
-            }
-     @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
-                }
+/* ----------- iPhone X ----------- */
 
-    @media only screen and (min-width : 321px) {
-                    }
-    
-    
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
 
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+  	.headline {
+        font-family: "DxSitrus-Expanded";
+        font-size: 33px;
+        font-stretch: auto;
+        font-weight: bold;
+        text-align: center;
+        /*margin: auto;*/
+        top: 10px;
+        height: 30%
+        width: 30%;
+        letter-spacing: 5px;
+        text-transform: uppercase;  
+        color: red;
+	}
+	a {
+	    background: linear-gradient(to bottom, var(--mainColor) 0%, var(--mainColor) 100%);
+	      background-position: 0 100%;
+	      background-repeat: repeat-x;
+	      background-size: 0px 0px;
+	    color: red;
+	    text-decoration: none;
+	    size: 30%;
+	  }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2)
+{
+ 
 
