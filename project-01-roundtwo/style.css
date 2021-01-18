@@ -14,7 +14,6 @@ body {
     background-image: url(img/stickerpeach.png);
     background-repeat: no-repeat;
     background-position-x: center;
-    background-attachment: fixed;
     background-position: center center;
     background-size: 50%;
     margin: 0;
