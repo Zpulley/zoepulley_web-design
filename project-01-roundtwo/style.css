@@ -1,7 +1,9 @@
 }
 @font-face {  
-    font-family: "Lazord-BoldExpanded";
+    font-family: 'Lazord-BoldExpanded';
     src: url(fonts/Lazord-BoldExpanded.woff)format(woff);
+    font-weight: 400;
+    font-style: normal;
 }
 
 
@@ -21,9 +23,9 @@ body {
 
 .headline {
  
-    font-family:"Lazord-BoldExpanded";
+    font-family: 'Lazord-BoldExpanded';
     font-size: 80px;
-    font-weight: 40%;
+    font-weight: 70%;
     text-align: center;
     top:40%;
     margin: auto;
@@ -215,7 +217,7 @@ a:hover {
     padding: 0 10px;
     font-size: 30px;
     width: 100%;
-    font-family: "Lazord-BoldExpanded";
+    font-family: 'Lazord-BoldExpanded';
     font-weight: bolder;
     color: white;
     margin-top: 10px;
@@ -260,7 +262,7 @@ a:hover {
     padding: 0 10px;
     font-size: 30px;
     width: 100%;
-    font-family:"Lazord-BoldExpanded";
+    font-family:'Lazord-BoldExpanded';
     font-weight: bolder;
     color: white;
     margin-top: 10px;
@@ -269,6 +271,9 @@ a:hover {
     
 }
 
-@media only screen and (max-width : 320px) {
-    
-    }
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
