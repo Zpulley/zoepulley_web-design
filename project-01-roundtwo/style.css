@@ -8,7 +8,7 @@ body {
     background-size: 50%;
     margin: 0;
     overflow:hidden;
-    flex-shrink:initial;
+    flex-shrink:30%;
 
 }
 
