@@ -172,7 +172,7 @@ a:hover {
     overflow:hidden;
     position: fixed;
     margin: 0 auto;
-    right: -70px;
+    right: 0px;
     top: 350px;
     transform: rotate(-20deg) translate(150px);  
     max-width: 2000px;
