@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "DxSitrus-Expanded";
-    src: url(DxSitrus-Expanded.woff)format("woff");
+    src: url("DxSitrus-Expanded.woff")format("woff");
 }
 @font-face {  
     font-family: Lazord-BoldExpanded;
@@ -173,8 +173,8 @@ a:hover {
     position: fixed;
     margin: 0 auto;
     right: 0px;
-    top: 350px;
-    transform: rotate(-20deg) translate(150px);  
+    top: 450px;
+    transform: rotate(-20deg) translate(200px);  
     max-width: 2000px;
 }
 .ticker-wrap3 {

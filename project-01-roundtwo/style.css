@@ -1,0 +1,11 @@
+/*fonts*/
+
+@font-face {  
+    font-family: "Lazord-BoldExpanded";
+    src: url("fonts/Lazord-BoldExpanded.woff")format(woff);
+}
+p {
+        width: 500px;
+        margin: 0 auto;
+        font-family: Lazord-BoldExpanded;
+      }
