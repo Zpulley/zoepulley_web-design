@@ -99,16 +99,16 @@ a:hover {
     overflow: visible;
     width: 100vh;
     overflow:hidden;
-    margin-left: 100px;
+    margin-left: 800px;
     position: absolute;
-    transform: rotate(180deg) translateX(500px);
-      -webkit-animation: princess-peach 5s linear infinite;
+    transform: rotate(180deg) translateX(800px);
+      -webkit-animation: princess-peach 4s linear infinite;
 }
 
 @-webkit-keyframes princess-peach {
-    0% { -webkit-transform:translateY(800px) rotate(0deg); }
-    50% { -webkit-transform:translateY(800px) rotate(180deg); }
-    100%   { -webkit-transform:translateY(800px) rotate(360deg); }
+    0% { -webkit-transform:translateY(600px) rotate(0deg); }
+    50% { -webkit-transform:translateY(600px) rotate(180deg); }
+    100%   { -webkit-transform:translateY(600px) rotate(360deg); }
 }
 
 .princess-peach2 {
@@ -121,15 +121,15 @@ a:hover {
     overflow:hidden;
     margin-left: 100px;
     position: absolute;
-    transform: rotate(180deg) translateX(800px);
+    transform: rotate(-180deg) translateY(500px);
       -webkit-animation: princess-peach2 4s linear infinite;
     
 }
 
 @-webkit-keyframes princess-peach2 {
-    0% { -webkit-transform:translateY(-200px) rotate(0deg); }
-    50% { -webkit-transform:translateY(-200px) rotate(180deg); }
-    100%   { -webkit-transform:translateY(-200px) rotate(360deg); }
+    0% { -webkit-transform:translateY(100px) rotate(0deg); }
+    50% { -webkit-transform:translateY(100px) rotate(-180deg); }
+    100%   { -webkit-transform:translateY(100px) rotate(-360deg); }
 }
 
 .med-peach2 {
