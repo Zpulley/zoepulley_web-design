@@ -1,5 +1,5 @@
 
-alert('test');
+
 
 $( "li" ).hover(
     function() {
