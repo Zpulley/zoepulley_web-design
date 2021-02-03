@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title> ZP Portfolio Landing Page</title>
+ 
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  
+  
+</head> 
+<style>
+
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family:'Trap' ;
+  src: url('Trap-Bold.otf')format('otf');
+}
+@font-face {
+  font-family:'Trap-Black' ;
+  src: url('Trap-Black.otf')format('otf');
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Trap'; 
+  background-color:rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  background-image:url("img/zp-logo.gif") ;
+  background-repeat: no-repeat;
+  background-size:45% ;
+  background-position:center;
+  margin-bottom: -8%;
+  }
+
+  
+.tcontainer {
+  width: 100%;
+  overflow:hiden;
+  position: fixed;
+  margin: 0 auto;
+  max-width: 2000px;
+  bottom:0;
+
+ 
+}
+.ticker-wrap {
+  width: 100%;
+  height: 80px;
+  padding-left: 100%;
+  background-color: #BBFD00;
+  margin: 0px;
+}
+.ticker-move {
+  display: inline-block;
+  white-space:nowrap;
+  padding-right: 100%;
+  animation-timing-function: linear;
+  animation: ticker 20s infinite;
+  animation-name: ticker;
+}
+@keyframes ticker {
+  0% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(-50, 0, 0); }
+  100% { transform: translate3d(-100%, 0, 0); }
+}
+.ticker-move:hover {
+  animation-play-state:paused;
+}
+.ticker-item {
+  display:-ms-inline-flexbox;
+  font-size: 40px;
+  width: 100%;
+  font-family: 'Trap'; 
+  font-weight: 900;
+  color: rgb(0, 0, 0);
+  margin-top: 20px;
+  text-transform:lowercase;
+  letter-spacing: 2px;   
+}
+
+
+.divbutton{
+  display: block;
+}
+a:hover {
+    position: relative;
+    background-image: url(img/hibutton-02.png); 
+    display: block;
+    position: absolute;
+}
+
+  </style>
+
+<body>
+
+    <div class="divbutton">
+       <a href="www.zoepulley.com">
+
+    </div>
+
+    <div class="tcontainer">
+     <div class="ticker-wrap">
+          <div class="ticker-move">
+            <div class="ticker-item">Zoe is a designer (most of the time) currently based in Providence, Rhode Island. </div>
+          </div>
+      </div>
+
+ 
+
+  
+  
+  
+    <script src="https://unpkg.com/floating.js"></script>
+  <script>
+    floating({
+      content: "💘",
+      number: 3,
+      duration: 11
+    });
+    floating({
+      content: "🍉",
+      number: 5,
+      duration: 8
+    });
+    floating({
+      content: "🍊",
+      number: 5,
+      duration: 15
+  
+    });
+    floating({
+      content: "🤙🏾",
+      number: 1,
+      duration: 10,
+      size: 6
+    });
+
+</script>
+
+
+  </body>
+
+</html>

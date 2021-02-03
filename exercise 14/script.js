@@ -1,12 +1,17 @@
+alert(test);
 
+$("document").ready(function(){
 
-$("document").ready(() => {
-
-        const mq = window, matchMedia; '(max-width:768px)';
-    });
-
-if(mq.matches){
-    $("h1").click(function() {
+    const mq = window.matchMedia(`(max-width: 768px)`);
+    $(".menuIcon").click(function(){
         $("nav").toggle();
+        
     });
-};
+    if (mq.matches) {
+        $(".menu").click(function(){
+            $("nav").toggle();
+            
+        });
+    }
+
+});
