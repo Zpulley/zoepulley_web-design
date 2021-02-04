@@ -18,4 +18,18 @@ $(document)
         
     })
     
+   var textPath=document.querySelector('#emoji-curve');
+
+   function updateTextPathOffset(offset){
+       textPath.setAttribute('starOffset',offset);
+   }
+
+   updateTextPathOffset(500);
+   function onScroll(){
+       requestAnimationFrame(function(){
+           updateTextPathOffset(window.scrollY);
     
+       });
+   }
+
+   window.addEventListener('scroll',onScroll);
