@@ -1,26 +1,11 @@
 $(document).ready(function() {
-	$(".processPage").hide();
-    	// same for work and info
-
-        // wait 3000 milliseconds after home page loads.
-        setTimeout(function(){ showHomePage(); }, 3000);
-
-        function showHomePage(){
-            $(".HomePage").show("slide", { direction: "left" }, 1000);
-        }
-
-
-        $(".process").click(function(e){
-        	window.location.href = "http://linkToOtherPage.com/Process/";
-        	//and then process js file has it's own showHomePage logic to animate the hidden element.
-        })
-	
 
 	//attaching an event listener to your link element—on hover, toggle the logo (which was intially showing, so it would hide) and the hibutton (which was initially hidden, so it would show)
 	$("a").hover(function() {
 		$(".logo").toggle();
 		$(".hibutton").toggle();
-		
+		var str = "Free Web Building Tutorials!";
+var result = str.link("https://www.w3schools.com");
 	});
 
 //looks like this stuff might not be necessary for using floating.js? the "jqFloat" function doesn't seem to be included in this version of the library, it was throwing an error in my console.
@@ -31,6 +16,40 @@ $(document).ready(function() {
 // 	});
 
   
+
+floating({
+	content: "💘",
+	number: 3,
+	duration: 11
+  });
+
+floating({
+content: "🍉",
+number: 5,
+duration: 8
+});
+
+floating({
+content: "🍊",
+number: 5,
+duration: 15
+
+});
+
+floating({
+content: "🤙🏾",
+number: 1,
+duration: 10,
+size: 6
+});
+
+floating({});
+
+
+//this stuff is no longer relevant, but just wanna point out that the period was missing in front of "divbutton" to refer to the class, and the "div" in $(div).css should be wrapped in quotes like $("div").css
+// $("divbutton").hover(function() {
+// 	$(div).css("background-image", "url(img/hibutton-02.png)"); 
+// });
 
 
 
