@@ -4,19 +4,25 @@
 @font-face {
   font-family: 'Trap';
   /* changed the format to "opentype" rather than "otf" */
-  src: url('Trap-Bold.otf')format('opentype');
+  src: url('fonts/Trap-Bold.otf')format('opentype');
 }
 @font-face {
   font-family:'Trap-Black' ;
   /* changed the format to "opentype" rather than "otf" */
-  src: url('Trap-Black.otf')format('opentype');
+  src: url('fonts/Trap-Black.otf')format('opentype');
+}
+
+@font-face {
+  font-family:'Lazord-Bold' ;
+  /* changed the format to "opentype" rather than "otf" */
+  src: url('fonts/Lazord-Bold.otf')format('opentype');
 }
 
 body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  font-family: 'Trap'; 
+  font-family: 'Lazord-Bold'; 
   background-color:rgb(0, 0, 0);
   color: rgb(255, 255, 255);
 
@@ -81,10 +87,9 @@ body {
   display:-ms-inline-flexbox;
   font-size: 40px;
   /* width: 100%; */
-  font-family: 'Trap'; 
-  font-weight: 900;
+  font-family: 'Lazord-Bold'; 
   color: rgb(0, 0, 0);
-  margin-top: 20px;
+  margin-top: 15px;
   text-transform:lowercase;
   letter-spacing: 2px;  
 
@@ -109,7 +114,7 @@ body {
 /* this selector is to select <a> tags that are direct children of something with class "divbutton". you could just select by "a", but just in case you add more <a> tags in the future with different styling, i wanted to be specific here. */
 .divbutton > a {
   /* pulled this width from the width you had set for your logo when it was a background image on the body */
-  width: 45%;
+  width: 50%;
 }
 
 img {
