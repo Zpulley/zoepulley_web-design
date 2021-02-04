@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
 }
@@ -15,21 +16,25 @@ body {
   background-color:rgb(0, 0, 0);
  
 }
+
+/* NAVIGATION */
 .nav-container {
   display:flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  height: calc(80% - 80px);
+  margin:0;
   text-align: center;
   width: 20%;
-  overflow: hidden;
   position: fixed;
   font-size: 35px;
   color:#BBFD00;
   letter-spacing: 2px; 
-  padding:10px;
-  padding-left: 50px;
+  padding-left: 40px;
   
 }
+
 a{
   color:#BBFD00;
   text-decoration:none;
@@ -43,42 +48,41 @@ a{
 .home{
   width:100%;
 }
+
 .logo{
   width:100%;
 }
 
+/* HERO IMAGE */
 .process-image{
-  display: flex;
-  justify-content:flex-end;
-  width:auto;
-  height: calc(auto - 80px);
-  padding-right:10%;
+  display:flex;
+  flex-direction: column;
+  align-items:flex-end;
+  justify-content:center;
+  width:calc(100% - 20%left);
+  margin:0;
+  padding-right:30px;
+  height: calc(80% - 80px);
 }
   
 .hero{
-  width: 70%;
-  height: calc(70% - 80px);
+  width: 75%;
+
   
 }
 
-
-
+/* BOTTOM TICKER */
 .tcontainer {
   width: 100%;
   overflow: hidden;
   position: fixed;
   margin: 0 auto;
-  /* changed max-width to width */
   width: 100vw;
   bottom:0;
-
- 
 }
 .ticker-wrap {
   width: 100%;
   height: 80px;
-
-
   background-color: #BBFD00;
   margin: 0px;
 }
@@ -87,22 +91,12 @@ a{
   white-space:nowrap;
 }
 @keyframes ticker {
-  /* for the transforms, i changed the "translate3D(value, value, value)" to just "translate(value)" because you're only moving something along the x-axis. */
-
-  /* translating 100% over, which means "take the full width of this thing and move it over by that much */
   0% { transform: translate(100%); }
-
-  /* don't need a halfway point because it's just a linear animation all the way through */
-  /* 50% { transform: translate3d(-50%, 0, 0); } */
-
   100% { transform: translate(-100%); }
 }
-
-/* changed this hover to ".ticker-item" rather than ".ticker-move" since i moved the animation to ".ticker-item" below */
 .ticker-item:hover {
   animation-play-state:paused;
 }
-
 .ticker-item {
   display:-ms-inline-flexbox;
   font-size: 40px;
@@ -112,13 +106,15 @@ a{
   margin-top: 15px;
   text-transform:lowercase;
   letter-spacing: 2px;  
-
-  /* added the ticker animation here. i also added the "linear" straight into the shorthand instead of writing a separate animation-timing-function property for it */
-     animation: ticker 20s linear infinite;
+  animation: ticker 20s linear infinite;
 }
 
+/* TOP TICKER */
 
 
+
+
+/* CUSTOM CURSOR */
 img {
   /* this CSS is to make sure your img elements take up the full width of the container, while maintaining aspect ratio. since its container is the <a> tag, the image will be 45% of the page width, inherited from its parent (the <a> tag it's wrapped in) */
   width: 100%;
@@ -126,22 +122,28 @@ img {
 }
 
 a:hover {
-  /* position properties are no longer relevant since we're using flexbox to center the images on the page */
-  /* position: relative; */
-
-  /* i added quotation marks around the path to your image. whenever you're using "url( )" in CSS, make sure whatever goes inside it is a string. the "pointer" afterwards is a fallback, in case for whatever reason the image doesn't load, then you still get the default pointer cursor (the little hand signifying clickable elements) rather than the default arrow cursor */
   cursor: url("img/thumbemoji.png"), pointer;
+  size:10px;
 
-  /* the below is no longer relevant since we put the hibutton image directly in HTML. */
-  /* background-image: url("img/hibutton-02.png"); */
-  /* display: block;
-  position: absolute; */
-}
-
-/* setting the initial state of the hibutton to none so we can use JS to toggle it on and off */
-.hibutton {
+.callme {
   display: none;
 }
 
 
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+  body{
+    color:white;
+    background-color: chartreuse;
+  }
+
+  h1 {
+   color:white;
+  }
+  nav {
+    display: none;
+  }
+ 
+}
  
