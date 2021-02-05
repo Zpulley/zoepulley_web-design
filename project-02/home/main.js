@@ -1,9 +1,10 @@
 $(document).ready(function() {
 
+
 	//attaching an event listener to your link element—on hover, toggle the logo (which was intially showing, so it would hide) and the hibutton (which was initially hidden, so it would show)
 	$("a").hover(function() {
 		$(".logo").toggle();
-		$(".hibutton").toggle();
+		$("#lets-chat").toggle();
 		var str = "Free Web Building Tutorials!";
 var result = str.link("https://www.w3schools.com");
 	});
@@ -43,7 +44,7 @@ duration: 10,
 size: 6
 });
 
-floating({});
+
 
 
 //this stuff is no longer relevant, but just wanna point out that the period was missing in front of "divbutton" to refer to the class, and the "div" in $(div).css should be wrapped in quotes like $("div").css

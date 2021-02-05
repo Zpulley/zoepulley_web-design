@@ -14,7 +14,41 @@ body {
   margin: 0;
   font-family: 'Lazord-Bold'; 
   background-color:rgb(0, 0, 0);
+  overflow:hidden;
  
+}
+
+/* HAMBURGER MENU - not sure how to get this running correctly  */
+topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.active {
+  background-color: #4CAF50;
+  color: white;
 }
 
 /* NAVIGATION */
@@ -41,34 +75,54 @@ a{
 }
 
 .nav-container > a {
-
   width:10px;
 }
-
+/* trying to get the #lets-chat image to appear on hover over the .logo. currently the image is not appearing - not sure how to correct */
 .home{
   width:100%;
 }
 
 .logo{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width:100%;
+  
+}
+
+.home > a{
+  width: 20%;
+}
+
+.logo:hover {
+  cursor: url("img/thumbemoji-32x32.png"), pointer;
   width:100%;
 }
 
-/* HERO IMAGE */
+#lets-chat {
+  display: none;
+  width: 100%;
+  transform:rotate(-25deg);
+  position: absolute;
+}
+
+
+
+/* HERO IMAGE - I can't figure out how to get the .process-image container to sit right of the nav bar. now its set where it runs into the nav-container when the screen width is changed */
+
 .process-image{
   display:flex;
   flex-direction: column;
   align-items:flex-end;
   justify-content:center;
-  width:calc(100% - 20%left);
   margin:0;
-  padding-right:30px;
-  height: calc(100% - 80px);
+  padding-right:10%;
+  height: calc(100% - 10%);
+  width: calc(100% + 25%);
 }
-  
 .hero{
-  width: 75%;
-
-  
+  width: 75%; 
 }
 
 /* BOTTOM TICKER */
@@ -108,39 +162,14 @@ a{
   animation: ticker 20s linear infinite;
 }
 
-/* EMOJI SVG
-I can't figure out how to get the text from my HTML to animage along the svg path*/
-#emoji-curve{
-  position:fixed;
-}
+/* EMOJI SVG*/
+
 #text-container{
-  animation:emoji 20s linear infinite;
   position: absolute;
 }
 
 
-@keyframes emoji{
-  0% { transform: translate(-100%); }
-  100% { transform: translate(100%);
-}
-
-/* CUSTOM CURSOR */
-img {
-  /* this CSS is to make sure your img elements take up the full width of the container, while maintaining aspect ratio. since its container is the <a> tag, the image will be 45% of the page width, inherited from its parent (the <a> tag it's wrapped in) */
-  width: 100%;
-  height: auto;
-}
-
-a:hover {
-  cursor: url("img/thumbemoji.png"), pointer;
-  size:10px;
-
-.callme {
-  display: none;
-}
-
-
-/* MEDIA QUERIES */
+/* MEDIA QUERIES - what should i add to get the hamburger menu to work? I'm trying to have the hamburger menu sit below the logo*/
 
 @media screen and (max-width: 768px) {
   body{
@@ -148,10 +177,10 @@ a:hover {
     background-color: chartreuse;
   }
 
-  h1 {
-   color:white;
+  .logo {
+   flex-grow: inherit;
   }
-  nav {
+  .nav-container {
     display: none;
   }
  
