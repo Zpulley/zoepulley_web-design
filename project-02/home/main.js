@@ -4,7 +4,7 @@ $(document).ready(function() {
 	//attaching an event listener to your link element—on hover, toggle the logo (which was intially showing, so it would hide) and the hibutton (which was initially hidden, so it would show)
 	$("a").hover(function() {
 		$(".logo").toggle();
-		$("#lets-chat").toggle();
+		$(".hibutton").toggle();
 		var str = "Free Web Building Tutorials!";
 var result = str.link("https://www.w3schools.com");
 	});
