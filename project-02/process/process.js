@@ -1,23 +1,23 @@
 $(document)
     .ready(function () {
-    	$(".processPage").hide();
-    	// trying to have this page slide in from the right. 
+    	$(".body").hide();
+    	// trying to have this page slide in from the right but not working. 
 
 
         setTimeout(function(){ showHomePage(); }, 3000);
 
         function showHomePage(){
-            $(".HomePage").show("slide", { direction: "left" }, 1000);
+            $(".body").show("slide", { direction: "left" }, 1000);
         }
 
 
-        $(".process").click(function(e){
+        $(".body").click(function(e){
         	window.location.href = "http://linkToOtherPage.com/Process/";
         	
         })
         
     })
- //attempt at hover
+
     $("a").hover(function() {
 		$("#lets-chat").toggle();
 		$(".logo").toggle();
@@ -27,7 +27,7 @@ $(document)
 
     
    var textPath=document.querySelector('#emoji-curve');
-   //can't figure out why my animation will not run. i'm trying to have the text within the textpath run along the svg path
+   //EMOJI SVG - can't figure out why my animation will not run. i'm trying to have the text within the textpath run along the svg path
 
    function updateTextPathOffset(offset){
        textPath.setAttribute('startOffset',offset);
@@ -43,7 +43,7 @@ $(document)
 
    window.addEventListener('scroll',onScroll);
 
-// attempt at hamburger menu 
+
    function myFunction() {
     var x = document.getElementById("myLinks");
     if (x.style.display === "block") {
