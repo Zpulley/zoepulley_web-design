@@ -44,6 +44,19 @@ duration: 10,
 size: 6
 });
 
+floating({
+content: "🖖🏾",
+number: 1,
+duration: 14,
+size: 6
+	});
+
+floating({
+content: "👏🏾",
+number: 1,
+duration: 8,
+size: 6
+});
 
 
 
