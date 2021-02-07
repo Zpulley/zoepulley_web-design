@@ -35,6 +35,7 @@ p{
   font-size: 80px;
   padding-left:30px;
   padding-top:120px;
+  line-height: 1.2;
  
 }
 
@@ -46,15 +47,29 @@ p{
   height:100vh;
   font-size: 30px;
   padding-right:30px;
+  line-height: 1.2;
 
+}
+ul
+{
+list-style-type: none;
+padding-top: 15px;
+margin: 0;
+text-align: right;
 }
 
 li{
-  list-style-type: none;
-  content:'\1F95E';
-  ;
+background-image: url(img/emojis\ 32x32-02.png);
+background-repeat: no-repeat;
+background-position: 100% 0em;
+padding-right: 1.5em;
 
 }
+
+::marker{
+  right:0;
+}
+
 
 a {
   background: linear-gradient(to bottom, var(--mainColor) 0%, var(--mainColor) 100%);
