@@ -1,20 +1,72 @@
-$(document)
-    .ready(function () {
-    	$(".processPage").hide();
-    	// same for work and info
+$(document).ready(function() {
+    floating({
+        content: "💘",
+        number: 2,
+        duration: 11
+      });
+    
+    floating({
+    content: "🍉",
+    number: 2,
+    duration: 8
+    });
+    
+    floating({
+    content: "🍊",
+    number: 2,
+    duration: 15
+    
+    });
+    
+    floating({
+    content: "🤙🏾",
+    number: 1,
+    duration: 10,
+    size: 3
+    });
+    
+    floating({
+    content: "🖖🏾",
+    number: 1,
+    duration: 14,
+    size: 3
+        });
+    
+    floating({
+    content: "👏🏾",
+    number: 1,
+    duration: 8,
+    size: 6
+    });
 
-        // wait 3000 milliseconds after home page loads.
-        setTimeout(function(){ showHomePage(); }, 3000);
+// attempting to set a slide in from bottom
+$(".body").hide();
 
-        function showHomePage(){
-            $(".HomePage").show("slide", { direction: "left" }, 1000);
-        }
+    setTimeout(function(){ showContactPage(); }, 3000);
 
-
-        $(".process").click(function(e){
-        	window.location.href = "http://linkToOtherPage.com/Process/";
-        	//and then process js file has it's own showHomePage logic to animate the hidden element.
-        })
+    function showContactPage(){
+        $(".body").show("slide", { direction: "bottom" }, 1000);
+    }
+    $(".body").click(function(e){
+        window.location.href = "https://zpulley.github.io/zoepulley_web-design/project-02/process/process.html";
         
     })
-        
+    
+})
+
+// attempting to make the emoji svg run
+var textPath=document.querySelector('#emoji-curve');
+
+function updateTextPathOffset(offset){
+    textPath.setAttribute('startOffset',offset);
+}
+
+updateTextPathOffset(50);
+function onScroll(){
+    requestAnimationFrame(function(){
+        updateTextPathOffset(window.scrollX*1.5);
+ 
+    });
+}
+
+
