@@ -3,16 +3,16 @@
 }
 
 @font-face {
-  font-family:'Bau-Bold' ;
+  font-family:'Lazord-Bold' ;
   /* changed the format to "opentype" rather than "otf" */
-  src: url('fonts/Bau-Bold.otf')format('opentype');
+  src: url('fonts/Lazord-Bold.otf')format('opentype');
 }
 
 body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  font-family: 'Bau-Bold'; 
+  font-family: 'Lazord-Bold'; 
   background-color:rgb(0, 0, 0);
   color: rgb(255, 255, 255);
 
@@ -71,7 +71,7 @@ body {
   display:-ms-inline-flexbox;
   font-size: 30px;
   /* width: 100%; */
-  font-family: 'Bau-Bold'; 
+  font-family: 'Lazord-Bold'; 
   color: rgb(0, 0, 0);
   margin-top: 12px;
   text-transform:lowercase;
@@ -87,7 +87,7 @@ body {
 
   /* added CSS—width 100% to make it take up the full width of the body, height should also be 100%, but because of your fixed ticker, i used calc to take into account the 80px ticker height. this width and height stuff is to be able to use flexbox to center the image on the page. */
   width: 100%;
-  height: calc(100% - 80px);
+  height: calc(100% - 60px);
 
   /* using flexbox here, which is an easy way of both vertically and horizontally centering something. justify-content takes care of horizontal centering while align-items takes care of vertical */
   display: flex;

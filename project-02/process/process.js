@@ -1,25 +1,33 @@
-$(document)
+$(document).ready(function() {
 
-// attempting to call the hover effect for "#lets-chat"
-$(".home").hover(function() {
-  $(".logo").toggle();
+$(".logo").hover(function() {
+  $().toggle();
   $("#lets-chat").toggle();
   var str = "Free Web Building Tutorials!";
 var result = str.link("https://www.w3schools.com");
 });
 
-// attempting to call the hover effect for "#starburst"
+
 $(".process").hover(function() {
-  $(".process").toggle();
+  $().toggle();
   $("#starburst").toggle();
-  var str = "Free Web Building Tutorials!";
-var result = str.link("https://www.w3schools.com");
+  
+});
+
+$(".work").hover(function() {
+  $().toggle();
+  $("#starburst").toggle();
+ 
+});
+
+$(".info").hover(function() {
+  $().toggle();
+  $("#starburst").toggle();
+
 });
 
 
-
 // attempting to set a slide in from right page transition
-.ready(function () {
     	$(".body").hide();
     
         setTimeout(function(){ showHomePage(); }, 3000);
@@ -27,12 +35,9 @@ var result = str.link("https://www.w3schools.com");
         function showHomePage(){
             $(".body").show("slide", { direction: "right" }, 1000);
         }
-        $(".body").click(function(e){
-        	window.location.href = "http://linkToOtherPage.com/Process/";
-        	
         })
         
-    })
+  
 
 // attempting to make the emoji svg run
    var textPath=document.querySelector('#emoji-curve');

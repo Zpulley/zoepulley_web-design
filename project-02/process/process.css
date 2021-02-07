@@ -4,15 +4,15 @@
 }
 
 @font-face {
-  font-family:'Bau-Bold' ;
-  src: url('fonts/Bau-Bold.otf')format('opentype');
+  font-family:'Lazord-Bold' ;
+  src: url('fonts/Lazord-Bold.otf')format('opentype');
 }
 
 body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  font-family: 'Bau-Bold'; 
+  font-family: 'Lazord-Bold'; 
   background-color:rgb(0, 0, 0);
   overflow:hidden;
  
@@ -21,7 +21,7 @@ body {
 /* EMOJI SVG - attempting to have this container sit ontop of the .process-image container*/
 
 #text-container{
-  position: absolute;
+  position:absolute;
 }
 
 /* HAMBURGER MENU  */
@@ -81,56 +81,69 @@ a{
 
 
 
-/* trying to get the #lets-chat image to appear on hover over the .logo. currently the image is not appearing - not sure how to correct - using js to call event */
+/* trying to get the #lets-chat image to appear on hover over the .logo - not sure why i can't get the hover to work properly (glitchy) */
 .home{
   position:relative;
 }
 
 .logo{
   display:flex;
+  flex-grow: inherit;
   justify-content: center;
   align-items: center;
   align-content: center;
   width:100%;
   padding:10px;
+  max-width: 180px;
   
 }
 
 #lets-chat {
   display: none;
-  width: 100%;
-  transform:rotate(-25deg);
   position: absolute;
+  width: 130%;
+  transform:rotate(-25deg);
+  top:0;
+  left:0;
+
 }
 .logo:hover {
   cursor: url("img/angel.png"), pointer;
   width:100%;
 }
 
+.links-effects > a{
+  width:200%;
+}
 
-/* trying to get the .starburst image to appear on hover over the .nav-container. currently the image is not appearing - not sure how to correct - using js to call event */
+
+/* trying to get the .starburst image to appear on hover over the the "process" "work" and "info" sections. currently i can only get the starburst to appear when hovered on "process" and it's in the wrong place*/
 
 .process.work.info{
-  position:relative;
+  position: absolute;;
   display: inline-block;
 }
 #starburst {
   display: none;
   width: 30%;
   position: absolute;
-  
+ 
 }
+
 .process:hover {
   cursor: url("img/surfer.png"), pointer;
   width:100%;
+  color:blue;
 }
 .work:hover {
   cursor: url("img/eyes.png"), pointer;
   width:100%;
+  color:blue;
 }
 .info:hover {
   cursor: url("img/strawberry.png"), pointer;
   width:100%;
+  color:blue;
 }
 
 
@@ -189,7 +202,7 @@ a{
 .ticker-item {
   display:-ms-inline-flexbox;
   font-size: 30px;
-  font-family: 'Bau-Bold'; 
+  font-family: 'Lazord-Bold'; 
   color: rgb(0, 0, 0);
   margin-top: 12px;
   text-transform:lowercase;
@@ -241,5 +254,7 @@ a{
     width: 100%;
   }
  
+  #text-container{
+  display:none;  }
 }
  
