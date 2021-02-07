@@ -4,15 +4,15 @@
 }
 
 @font-face {
-  font-family:'Lazord-Bold' ;
-  src: url('fonts/Lazord-Bold.otf')format('opentype');
+  font-family:'Bau-Bold' ;
+  src: url('fonts/Bau-Bold.otf')format('opentype');
 }
 
 body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  font-family: 'Lazord-Bold'; 
+  font-family: 'Bau-Bold'; 
   background-color:rgb(0, 0, 0);
   overflow:hidden;
  
@@ -189,7 +189,7 @@ a{
 .ticker-item {
   display:-ms-inline-flexbox;
   font-size: 30px;
-  font-family: 'Lazord-Bold'; 
+  font-family: 'Bau-Bold'; 
   color: rgb(0, 0, 0);
   margin-top: 12px;
   text-transform:lowercase;

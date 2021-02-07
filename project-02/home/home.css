@@ -1,37 +1,21 @@
 * {
   box-sizing: border-box;
 }
-@font-face {
-  font-family: 'Trap';
-  /* changed the format to "opentype" rather than "otf" */
-  src: url('fonts/Trap-Bold.otf')format('opentype');
-}
-@font-face {
-  font-family:'Trap-Black' ;
-  /* changed the format to "opentype" rather than "otf" */
-  src: url('fonts/Trap-Black.otf')format('opentype');
-}
 
 @font-face {
-  font-family:'Lazord-Bold' ;
+  font-family:'Bau-Bold' ;
   /* changed the format to "opentype" rather than "otf" */
-  src: url('fonts/Lazord-Bold.otf')format('opentype');
+  src: url('fonts/Bau-Bold.otf')format('opentype');
 }
 
 body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  font-family: 'Lazord-Bold'; 
+  font-family: 'Bau-Bold'; 
   background-color:rgb(0, 0, 0);
   color: rgb(255, 255, 255);
 
-  /* removing this stuff since we're adding the images directly in HTML and also dealing with positioning with flexbox on the image container "divbutton" below */
-  /* background-image:url("img/zp-logo.gif") ;
-  background-repeat: no-repeat;
-  background-size:45% ;
-  background-position:center;
-  margin-bottom: -8%; */
   }
 
   
@@ -87,7 +71,7 @@ body {
   display:-ms-inline-flexbox;
   font-size: 30px;
   /* width: 100%; */
-  font-family: 'Lazord-Bold'; 
+  font-family: 'Bau-Bold'; 
   color: rgb(0, 0, 0);
   margin-top: 12px;
   text-transform:lowercase;
