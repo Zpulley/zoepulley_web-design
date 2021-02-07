@@ -18,6 +18,12 @@ body {
  
 }
 
+/* EMOJI SVG - attempting to have this container sit ontop of the .process-image container*/
+
+#text-container{
+  position: absolute;
+}
+
 /* HAMBURGER MENU  */
 .topnav {
   background-color: #333;
@@ -75,9 +81,9 @@ a{
 
 
 
-/* trying to get the #lets-chat image to appear on hover over the .logo. currently the image is not appearing - not sure how to correct */
+/* trying to get the #lets-chat image to appear on hover over the .logo. currently the image is not appearing - not sure how to correct - using js to call event */
 .home{
-  width:100%;
+  position:relative;
 }
 
 .logo{
@@ -90,22 +96,42 @@ a{
   
 }
 
-.home > a {
-  width: 20%;
-}
-
-.logo:hover {
-  cursor: url("img/thumbemoji-32x32.png"), pointer;
-  width:100%;
-}
-
 #lets-chat {
   display: none;
   width: 100%;
   transform:rotate(-25deg);
   position: absolute;
 }
+.logo:hover {
+  cursor: url("img/angel.png"), pointer;
+  width:100%;
+}
 
+
+/* trying to get the .starburst image to appear on hover over the .nav-container. currently the image is not appearing - not sure how to correct - using js to call event */
+
+.process.work.info{
+  position:relative;
+  display: inline-block;
+}
+#starburst {
+  display: none;
+  width: 30%;
+  position: absolute;
+  
+}
+.process:hover {
+  cursor: url("img/surfer.png"), pointer;
+  width:100%;
+}
+.work:hover {
+  cursor: url("img/eyes.png"), pointer;
+  width:100%;
+}
+.info:hover {
+  cursor: url("img/strawberry.png"), pointer;
+  width:100%;
+}
 
 
 /* HERO IMAGE */
@@ -127,6 +153,11 @@ a{
 }
 .hero > img {
   width: 100%;
+}
+
+.hero:hover {
+  cursor: url("img/cartwheel.png"), pointer;
+  
 }
 
 /* BOTTOM TICKER */
@@ -164,12 +195,6 @@ a{
   text-transform:lowercase;
   letter-spacing: 2px;  
   animation: ticker 20s linear infinite;
-}
-
-/* EMOJI SVG*/
-
-#text-container{
-  position: absolute;
 }
 
 
