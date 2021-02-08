@@ -13,7 +13,12 @@ body {
   margin: 0;
   font-family: 'Lazord-Bold'; 
   background-color:black;
-  overflow:hidden;
+  overflow:visible;
+  background-color:#BBFD00;
+  background-image: url("img/478050_10152747034490247_887388286_o.jpg");
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position: bottom right;
  
 }
 
@@ -21,40 +26,31 @@ body {
 .bio{
   display:flex;
   justify-items:flex-start;
-  width: 100vw;
+  width: 50%;
   height:100vh;
-  background-color:#BBFD00;
+  margin:0;
 
 }
 
 
-ul:hover{
-  cursor: url("img/emojis\ 32x32-03.png"), pointer;
-  width:100%;
-}
-
-p:hover{
-  color: blue;
-  cursor: url("img/thumbemoji.png") pointer;
-  background-image: url("img/478050_10152747034490247_887388286_o.jpg");
-  background-repeat: no-repeat;
-  background-size: 35%;
-  background-position: bottom right;
-  
-
-}
 
 p{
   position: absolute;
-  height:100vh;
+  width:55%;
   font-size: 30px;
   padding-left:30px;
-  padding-right:400px;
-  padding-top:120px;
+  padding-top:80px;
   line-height: 1.2;
   list-style-type: none;
   color:black;
+  cursor: url("img/thumbemoji.png") pointer;
+/* can't get the custom cursors to run */
  
+}
+
+p:hover{
+  color:blue;
+  
 }
 
 .social{
@@ -76,7 +72,7 @@ text-align: right;
 }
 
 li{
-background-image: url(img/emojis\ 32x32-02.png);
+background-image: url("img/emojis\ 32x32-02.png");
 background-repeat: no-repeat;
 background-position: 100% 0em;
 padding-right: 1.5em;
@@ -84,10 +80,11 @@ padding-right: 1.5em;
 }
 
 li:hover{
-background-image: url(img/black-02.png);
+background-image: url("img/black-02.png");
 background-repeat: no-repeat;
 background-position: 100% 0em;
 padding-right: 1.5em;
+cursor: url("img/angel.png"), pointer;
 }
 
 

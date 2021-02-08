@@ -8,24 +8,6 @@ var result = str.link("https://www.w3schools.com");
 });
 
 
-$(".process").hover(function() {
-  $().toggle();
-  $("#starburst").toggle();
-  
-});
-
-$(".work").hover(function() {
-  $().toggle();
-  $("#starburst").toggle();
- 
-});
-
-$(".info").hover(function() {
-  $().toggle();
-  $("#starburst").toggle();
-
-});
-
 
 // attempting to set a slide in from right page transition
     	$(".body").hide();
@@ -43,11 +25,11 @@ $(".info").hover(function() {
    var textPath=document.querySelector('#emoji-curve');
 
    function updateTextPathOffset(offset){
-       textPath.setAttribute('startOffset',offset);
+       textPath.attr('startOffset');
    }
 
    updateTextPathOffset(50);
-   function onScroll(){
+   function mouseenter(){
        requestAnimationFrame(function(){
            updateTextPathOffset(window.scrollX*1.5);
     

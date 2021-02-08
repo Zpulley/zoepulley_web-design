@@ -82,29 +82,9 @@ a{
   display: block;
 }
 
-a {
-  background: linear-gradient(to bottom, var(--mainColor) 0%, var(--mainColor) 100%);
-    background-position: 0 100%;
-    background-repeat: repeat-x;
-    background-size: 0px 0px;
-  color: #BBFD00;
-  text-decoration: none;
-     
-}
-
-a:hover {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%230000ff' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
-  background-position: 0 100%;
-  background-size: auto 12px;
-  background-repeat: repeat-x;
-  text-decoration: none;
-  color:#0000ff;
-
-}
 
 
-
-/* trying to get the #lets-chat image to appear on hover over the .logo - not sure why i can't get the hover to work properly (glitchy) */
+/*  not sure why i can't get the hover to work properly for #lets-chat (glitchy) */
 .home{
   position:relative;
 }
@@ -135,39 +115,60 @@ a:hover {
   width:100%;
 }
 
+.logo > a{
+  width:100%;
+}
+
 .links-effects > a{
-  width:200%;
+  width:100%;
 }
 
 
-/* trying to get the .starburst image to appear on hover over the the "process" "work" and "info" sections. currently i can only get the starburst to appear when hovered on "process" and it's in the wrong place*/
-
+/* MAIN NAV*/
 .process.work.info{
   position: absolute;;
   display: inline-block;
 }
 #starburst {
-  display: none;
+  display:none;
   width: 30%;
   position: absolute;
  
 }
-
 .process:hover {
   cursor: url("img/surfer.png"), pointer;
   width:100%;
   color:blue;
+  background-image: url(img/blue-08.png);
+  background-repeat: no-repeat;
+  background-position: 100% 0em;
+  padding-right: 1.5em;
+  background-size: 30%;
+  
 }
 .work:hover {
   cursor: url("img/eyes.png"), pointer;
   width:100%;
   color:blue;
+  background-image: url(img/blue-08.png);
+  background-repeat: no-repeat;
+  background-position: 100% 0em;
+  padding-right: 1.5em;
+  background-size: 40%;
 }
 .info:hover {
   cursor: url("img/strawberry.png"), pointer;
   width:100%;
   color:blue;
+  background-image: url(img/blue-08.png);
+  background-repeat: no-repeat;
+  background-position: 100% 0em;
+  padding-right: 1.5em;
+  background-size: 50%;
 }
+
+
+
 
 
 /* HERO IMAGE - not sure how to avoid the overlapping into other divs when the view gets larger...also not sure how to keep the .hero centered when the view gets larger. theres a space between the nav-container & process-image div and i'm not sure why */

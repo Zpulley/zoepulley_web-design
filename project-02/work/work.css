@@ -69,6 +69,7 @@ body {
   letter-spacing: 2px; 
   padding-left: 40px;
   z-index: 1;
+  
 }
 
 a{
@@ -102,9 +103,11 @@ a:hover {
 
 
 
-/* not sure why the #lets-chat toggle in my js is not working here. */
+/* NAV MENU - not sure why the #lets-chat toggle in my js is glitching */
 .home{
   position:relative;
+  flex-wrap: nowrap;
+  
 }
 
 .logo{
@@ -120,6 +123,7 @@ a:hover {
 }
 
 #lets-chat {
+  display:none;
   position: absolute;
   width: 130%;
   transform:rotate(-25deg);
@@ -134,17 +138,17 @@ a:hover {
 }
 
 .links-effects > a{
-  width:200%;
+  width:100%;
+  height:100%;
 }
 
-
-/* not sure why the #starburst toggle in my js is not working here. */
 
 .process.work.info{
   position: absolute;;
   display: inline-block;
 }
 #starburst {
+  display:none;
   width: 30%;
   position: absolute;
  
@@ -154,16 +158,32 @@ a:hover {
   cursor: url("img/surfer.png"), pointer;
   width:100%;
   color:blue;
+  background-image: url(img/bluestarburst.png);
+  background-repeat: no-repeat;
+  background-position: 100% 0em;
+  padding-right: 1.5em;
+  background-size: 30%;
+  
 }
 .work:hover {
   cursor: url("img/eyes.png"), pointer;
   width:100%;
   color:blue;
+  background-image: url(img/bluestarburst.png);
+  background-repeat: no-repeat;
+  background-position: 100% 0em;
+  padding-right: 1.5em;
+  background-size: 40%;
 }
 .info:hover {
   cursor: url("img/strawberry.png"), pointer;
   width:100%;
   color:blue;
+  background-image: url(img/bluestarburst.png);
+  background-repeat: no-repeat;
+  background-position: 100% 0em;
+  padding-right: 1.5em;
+  background-size: 50%;
 }
 
 
@@ -171,6 +191,7 @@ a:hover {
 
 .work-list{
   overflow:scroll;
+  margin-left:0;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -187,46 +208,60 @@ a:hover {
 ul{
   width: 100%; 
   height: 100vh;
+  list-style-type: none;
+  padding-left:0;
   
+}
+ 
+
+#work-links {
+  width:100%;
+  height: 20px;
+  font-family: "Lazord-Bold";
+  color:black;
+  font-size: 35px;
   
 }
 
 li{
   width:100%;
+  margin-left:0;
+  padding-left:70px;
+  padding-top: 10px;
   font-weight: bold;
   border-top: 5px solid black;
+  background-image: url(img/blue-08.png);
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: 100% .7em;
+  background-position:right;
 
 }
-#work-links {
+
+li:hover{
   width:100%;
-  height: 50px;
-  font-family: "Lazord-Bold";
-  color:black;
-  font-size: 30px;
-  
+  font-weight: bold;
+  border-top: 5px solid black;
+  background-image: url(img/black-08.png);
+  background-repeat: no-repeat;
+  background-position: 100% .7em;
+  background-position:left;
 
-}
 
-li:nth-child(1){
-  top: 100px;
-  left: 0;
-  border:5px;
-  border-color:blue;
-}
-
-::marker{
-  content:url(img/bluestarburst.png);
-  width: 200%;
 }
 
 #work-links:hover {
   cursor: url("img/cartwheel.png"), pointer;
+  color:blue;
+
   
 }
 
+
+
 /* BOTTOM TICKER */
 .tcontainer {
-  display: none;/* set to none since i'm hoping this will transtion out using jquery. see note in js file! */
+  display: none;/* set to none since i'm hoping this will transtion out using jquery. see note in js file!   */
   width: 100%;
   overflow: hidden;
   position: fixed;
@@ -235,6 +270,7 @@ li:nth-child(1){
   bottom:0;
 }
 .ticker-wrap {
+  display:none;
   width: 100%;
   height: 60px;
   background-color: #BBFD00;

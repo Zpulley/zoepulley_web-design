@@ -1,5 +1,13 @@
 $(document).ready(function() {
 
+// for some reason this is glitching when ran.
+$(".logo").hover(function() {
+  $().toggle();
+  $("#lets-chat").toggle();
+  
+});
+
+
 // attempting to set a slide in from right page transition
 $(".body").hide();
     
@@ -7,8 +15,8 @@ setTimeout(function(){ showWorkPage(); }, 3000);
 
 function showWorkPage(){
     $(".body").show("slide", { direction: "right" }, 1000);
-}
-})
+};
+
 
 // attempting make the "EMOJI SVG'" slide out towards the left once you enter the page
 $(".emoji-curve").hide();
@@ -17,50 +25,19 @@ setTimeout(function(){ showWorkPage(); }, 3000);
 
 function showWorkPage(){
     $(".emoji-curve").show("slide", { direction: "left" }, 1000);
-}
+};
 
 
 // attempting make the ".tcontainer'" slide out towards the left once you enter the page
 $(".tcontainer").hide();
-    
-setTimeout(function(){ showWorkPage(); }, 3000);
 
-function showWorkPage(){
-    $(".tcontainer").show("slide", { direction: "left" }, 1000);
+setTimeout(function(){ showHomePage(); }, 3000);
+
+function showHomePage(){
+$(".tcontainer").show("slide", { direction: "right" }, 1000);
+updateTextPathOffset(50);
 }
-})
 
-
-
-
-
-$(".logo").hover(function() {
-  $().toggle();
-  $("#lets-chat").toggle();
-  
-});
-
-
-$(".process").hover(function() {
-  $().toggle();
-  $("#starburst").toggle();
-  
-});
-
-$(".work").hover(function() {
-  $().toggle();
-  $("#starburst").toggle();
- 
-});
-
-$(".info").hover(function() {
-  $().toggle();
-  $("#starburst").toggle();
-
-});
-
-        
-  
 
 // attempting to make the emoji svg run
    var textPath=document.querySelector('#emoji-curve');
@@ -89,3 +66,5 @@ $(".info").hover(function() {
       x.style.display = "block";
     }
   }
+
+});
