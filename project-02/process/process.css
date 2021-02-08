@@ -21,7 +21,9 @@ body {
 /* EMOJI SVG - attempting to have this container sit ontop of the .process-image container*/
 
 #text-container{
-  position:absolute;
+  position:fixed;
+  width: 100vw;
+  height: 100px;
 }
 
 /* HAMBURGER MENU  */
@@ -62,7 +64,8 @@ body {
   margin:0;
   text-align: center;
   width: 20%;
-  position: fixed;
+  position: fixed; 
+  /* for some theres an undefined space between this container and the .process-image */
   font-size: 35px;
   color:#BBFD00;
   letter-spacing: 2px; 
@@ -167,7 +170,7 @@ a:hover {
 }
 
 
-/* HERO IMAGE */
+/* HERO IMAGE - not sure how to avoid the overlapping into other divs when the view gets larger...also not sure how to keep the .hero centered when the view gets larger. theres a space between the nav-container & process-image div and i'm not sure why */
 
 .process-image{
   position: absolute;
@@ -178,7 +181,9 @@ a:hover {
   align-items:center;
   justify-content:center;
   height: calc(100% - 10%);
-  width: 80%;
+  width: 150%;
+  max-width: 800px;
+
 }
 
 .hero{

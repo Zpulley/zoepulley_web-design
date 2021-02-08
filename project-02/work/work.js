@@ -1,20 +1,91 @@
-$(document)
-    .ready(function () {
-    	$(".processPage").hide();
-    	// same for work and info
+$(document).ready(function() {
 
-        // wait 3000 milliseconds after home page loads.
-        setTimeout(function(){ showHomePage(); }, 3000);
+// attempting to set a slide in from right page transition
+$(".body").hide();
+    
+setTimeout(function(){ showWorkPage(); }, 3000);
 
-        function showHomePage(){
-            $(".HomePage").show("slide", { direction: "left" }, 1000);
-        }
+function showWorkPage(){
+    $(".body").show("slide", { direction: "right" }, 1000);
+}
+})
+
+// attempting make the "EMOJI SVG'" slide out towards the left once you enter the page
+$(".emoji-curve").hide();
+    
+setTimeout(function(){ showWorkPage(); }, 3000);
+
+function showWorkPage(){
+    $(".emoji-curve").show("slide", { direction: "left" }, 1000);
+}
 
 
-        $(".process").click(function(e){
-        	window.location.href = "http://linkToOtherPage.com/Process/";
-        	//and then process js file has it's own showHomePage logic to animate the hidden element.
-        })
+// attempting make the ".tcontainer'" slide out towards the left once you enter the page
+$(".tcontainer").hide();
+    
+setTimeout(function(){ showWorkPage(); }, 3000);
+
+function showWorkPage(){
+    $(".tcontainer").show("slide", { direction: "left" }, 1000);
+}
+})
+
+
+
+
+
+$(".logo").hover(function() {
+  $().toggle();
+  $("#lets-chat").toggle();
+  
+});
+
+
+$(".process").hover(function() {
+  $().toggle();
+  $("#starburst").toggle();
+  
+});
+
+$(".work").hover(function() {
+  $().toggle();
+  $("#starburst").toggle();
+ 
+});
+
+$(".info").hover(function() {
+  $().toggle();
+  $("#starburst").toggle();
+
+});
+
         
-    })
-        
+  
+
+// attempting to make the emoji svg run
+   var textPath=document.querySelector('#emoji-curve');
+
+   function updateTextPathOffset(offset){
+       textPath.setAttribute('startOffset',offset);
+   }
+
+   updateTextPathOffset(50);
+   function onScroll(){
+       requestAnimationFrame(function(){
+           updateTextPathOffset(window.scrollX*1.5);
+    
+       });
+   }
+
+   window.addEventListener('scroll',onScroll);
+
+
+// hamburger menu for mobile - this works!
+   function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }

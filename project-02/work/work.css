@@ -1,20 +1,10 @@
+
 * {
   box-sizing: border-box;
-}
-@font-face {
-  font-family: 'Trap';
-  /* changed the format to "opentype" rather than "otf" */
-  src: url('fonts/Trap-Bold.otf')format('opentype');
-}
-@font-face {
-  font-family:'Trap-Black' ;
-  /* changed the format to "opentype" rather than "otf" */
-  src: url('fonts/Trap-Black.otf')format('opentype');
 }
 
 @font-face {
   font-family:'Lazord-Bold' ;
-  /* changed the format to "opentype" rather than "otf" */
   src: url('fonts/Lazord-Bold.otf')format('opentype');
 }
 
@@ -24,122 +14,299 @@ body {
   margin: 0;
   font-family: 'Lazord-Bold'; 
   background-color:rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
+  overflow:hidden;
+ 
+}
 
-  /* removing this stuff since we're adding the images directly in HTML and also dealing with positioning with flexbox on the image container "divbutton" below */
-  /* background-image:url("img/zp-logo.gif") ;
-  background-repeat: no-repeat;
-  background-size:45% ;
-  background-position:center;
-  margin-bottom: -8%; */
-  }
+/* EMOJI SVG - attempting to have this container sit ontop of the .process-image container*/
 
+#text-container{
+  display: none;/* set to none since i'm hoping this will transtion out using jquery. see note in js file! */
+  position:absolute;
+}
+
+/* HAMBURGER MENU  */
+.topnav {
+  background-color: #333;
+  display: none;
+  background: black;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+}
+
+.topnav a {
+  color: #BBFD00;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a:hover {
+  background-color: #BBFD00;
+  color: black;
+}
+.active {
+  background-color: white;
+  color: #BBFD00;
+}
+
+/* NAVIGATION */
+.nav-container {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 80px);
+  margin:0;
+  text-align: center;
+  width: 20%;
+  position: fixed;
+  font-size: 35px;
+  color:#BBFD00;
+  letter-spacing: 2px; 
+  padding-left: 40px;
+  z-index: 1;
+}
+
+a{
+  color:#BBFD00;
+  text-decoration:none;
+}
+
+#myLinks > a {
+  display: block;
+}
+
+a {
+  background: linear-gradient(to bottom, var(--mainColor) 0%, var(--mainColor) 100%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 0px 0px;
+  color: #BBFD00;
+  text-decoration: none;
+     
+}
+
+a:hover {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%230000ff' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: 0 100%;
+  background-size: auto 12px;
+  background-repeat: repeat-x;
+  text-decoration: none;
+  color:#0000ff;
+
+}
+
+
+
+/* not sure why the #lets-chat toggle in my js is not working here. */
+.home{
+  position:relative;
+}
+
+.logo{
+  display:flex;
+  flex-grow: inherit;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width:100%;
+  padding:10px;
+  max-width: 180px;
   
+}
+
+#lets-chat {
+  position: absolute;
+  width: 130%;
+  transform:rotate(-25deg);
+  top:20px;
+  left:0;
+
+}
+
+.logo:hover {
+  cursor: url("img/angel.png"), pointer;
+  width:100%;
+}
+
+.links-effects > a{
+  width:200%;
+}
+
+
+/* not sure why the #starburst toggle in my js is not working here. */
+
+.process.work.info{
+  position: absolute;;
+  display: inline-block;
+}
+#starburst {
+  width: 30%;
+  position: absolute;
+ 
+}
+
+.process:hover {
+  cursor: url("img/surfer.png"), pointer;
+  width:100%;
+  color:blue;
+}
+.work:hover {
+  cursor: url("img/eyes.png"), pointer;
+  width:100%;
+  color:blue;
+}
+.info:hover {
+  cursor: url("img/strawberry.png"), pointer;
+  width:100%;
+  color:blue;
+}
+
+
+/* WORK LIST */
+
+.work-list{
+  overflow:scroll;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: space-between;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 72%;
+  background-color: #BBFD00;
+  line-height: 70px;
+  
+}
+
+ul{
+  width: 100%; 
+  height: 100vh;
+  
+  
+}
+
+li{
+  width:100%;
+  font-weight: bold;
+  border-top: 5px solid black;
+
+}
+#work-links {
+  width:100%;
+  height: 50px;
+  font-family: "Lazord-Bold";
+  color:black;
+  font-size: 30px;
+  
+
+}
+
+li:nth-child(1){
+  top: 100px;
+  left: 0;
+  border:5px;
+  border-color:blue;
+}
+
+::marker{
+  content:url(img/bluestarburst.png);
+  width: 200%;
+}
+
+#work-links:hover {
+  cursor: url("img/cartwheel.png"), pointer;
+  
+}
+
+/* BOTTOM TICKER */
 .tcontainer {
+  display: none;/* set to none since i'm hoping this will transtion out using jquery. see note in js file! */
   width: 100%;
-  /* heads up, "hidden" was misspelled as "hiden" */
   overflow: hidden;
   position: fixed;
   margin: 0 auto;
-  /* changed max-width to width */
-  width: 2000px;
+  width: 100vw;
   bottom:0;
-
- 
 }
 .ticker-wrap {
   width: 100%;
-  height: 80px;
-
-  /* i'm moving the animation to the ticker item itself, so you don't need to push it off the page to begin with a padding property */
-  /* padding-left: 100%; */
+  height: 60px;
   background-color: #BBFD00;
   margin: 0px;
 }
 .ticker-move {
   display: inline-block;
   white-space:nowrap;
-
-  /* i'm moving the animation to the ticker item itself, so we can deal with the actual width of the text. this means the padding-right property is also defunct, since you don't have to account for pushing the inner text into position */
-  /* padding-right: 100%; */
-  /* animation-timing-function: linear; */
-  /* animation: ticker 20s linear infinite; */
-  /* animation-name: ticker; */
 }
 @keyframes ticker {
-  /* for the transforms, i changed the "translate3D(value, value, value)" to just "translate(value)" because you're only moving something along the x-axis. */
-
-  /* translating 100% over, which means "take the full width of this thing and move it over by that much */
   0% { transform: translate(100%); }
-
-  /* don't need a halfway point because it's just a linear animation all the way through */
-  /* 50% { transform: translate3d(-50%, 0, 0); } */
-
   100% { transform: translate(-100%); }
 }
-
-/* changed this hover to ".ticker-item" rather than ".ticker-move" since i moved the animation to ".ticker-item" below */
 .ticker-item:hover {
   animation-play-state:paused;
 }
-
 .ticker-item {
   display:-ms-inline-flexbox;
-  font-size: 40px;
-  /* width: 100%; */
+  font-size: 30px;
   font-family: 'Lazord-Bold'; 
   color: rgb(0, 0, 0);
-  margin-top: 15px;
+  margin-top: 12px;
   text-transform:lowercase;
   letter-spacing: 2px;  
-
-  /* added the ticker animation here. i also added the "linear" straight into the shorthand instead of writing a separate animation-timing-function property for it */
-     animation: ticker 20s linear infinite;
-}
-
-.divbutton{
-  /* commented out the display: block bc things are display: block by default */
-  /* display: block; */
-
-  /* added CSS—width 100% to make it take up the full width of the body, height should also be 100%, but because of your fixed ticker, i used calc to take into account the 80px ticker height. this width and height stuff is to be able to use flexbox to center the image on the page. */
-  width: 100%;
-  height: calc(100% - 80px);
-
-  /* using flexbox here, which is an easy way of both vertically and horizontally centering something. justify-content takes care of horizontal centering while align-items takes care of vertical */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* this selector is to select <a> tags that are direct children of something with class "divbutton". you could just select by "a", but just in case you add more <a> tags in the future with different styling, i wanted to be specific here. */
-.divbutton > a {
-  /* pulled this width from the width you had set for your logo when it was a background image on the body */
-  width: 45%;
-}
-
-img {
-  /* this CSS is to make sure your img elements take up the full width of the container, while maintaining aspect ratio. since its container is the <a> tag, the image will be 45% of the page width, inherited from its parent (the <a> tag it's wrapped in) */
-  width: 100%;
-  height: auto;
-}
-
-a:hover {
-  /* position properties are no longer relevant since we're using flexbox to center the images on the page */
-  /* position: relative; */
-
-  /* i added quotation marks around the path to your image. whenever you're using "url( )" in CSS, make sure whatever goes inside it is a string. the "pointer" afterwards is a fallback, in case for whatever reason the image doesn't load, then you still get the default pointer cursor (the little hand signifying clickable elements) rather than the default arrow cursor */
-  cursor: url("img/thumbemoji.png"), pointer;
-
-  /* the below is no longer relevant since we put the hibutton image directly in HTML. */
-  /* background-image: url("img/hibutton-02.png"); */
-  /* display: block;
-  position: absolute; */
-}
-
-/* setting the initial state of the hibutton to none so we can use JS to toggle it on and off */
-.hibutton {
-  display: none;
+  animation: ticker 20s linear infinite;
 }
 
 
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+  
+
+  .nav-container {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    width: 100%;
+    top: 0;
+    height: 20%;
+    padding-left: 0;
+  }
+
+  .logo {
+    display: inline-block;
+    width: auto;
+    height: 100%;
+    padding: 5px 5px 10px 5px;
+  }
+
+  .home {
+    width: auto;
+    height: 100%;
+  }
+
+  .topnav {
+    display: inline-block;
+  }
+
+
+  #myLinks {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+  }
+
+  .process-image {
+    width: 100%;
+  }
+ 
+  #text-container{
+  display:none;  }
+}
  
