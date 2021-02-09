@@ -1,0 +1,223 @@
+@font-face {
+  font-family:'Trap-Bold' ;
+  src: url('fonts/Trap-Bold.otf')format('opentype');
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0%;
+  font-family: 'Trap-Bold';
+  padding: 0;
+  overflow: hidden;
+ 
+}
+
+#social{
+  margin:0;
+  padding:0;
+  display:flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-right:0;
+  width: 100%;
+  height:calc(100% - 250px);
+  text-align: center; 
+  font-size: 30px;
+  line-height: 40px;
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+  position:relative;
+}
+
+
+
+.image-1:hover {
+  height:100%;
+  background-image: url(img/tiff.JPG);
+  background-size: 35%;
+  background-repeat: no-repeat;
+  background-position:left;
+  background-color: rgb(252, 1, 218);
+}
+
+.image-2:hover {
+  height:100%;
+  background-image: url(img/ri.JPG);
+  background-size: 20%;
+  background-repeat: no-repeat;
+  background-position:right;
+  background-color: rgb(228, 29, 198);
+}
+
+.image-3:hover {
+  height:100%;
+  background-image: url(img/idk.GIF);
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position:left;
+  background-color: rgb(207, 0, 176);
+}
+.image-4:hover {
+  height:100%;
+  background-image: url(img/beyonce.jpg);
+  background-size: 35%;
+  background-repeat: no-repeat;
+  background-position:right;
+  background-color: rgb(223, 124, 208);
+}
+.image-5:hover {
+  height:100%;
+  background-image: url(img/fromfriends.jpeg);
+  background-size: 38%;
+  background-repeat: no-repeat;
+  background-position:left;
+  background-color: rgb(255, 96, 231);
+}
+.image-6:hover {
+  height:100%;
+  background-image: url(img/luv.jpeg);
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position:right;
+  background-color: rgb(160, 0, 136);
+}
+.image-7:hover {
+  height:100%;
+  background-image: url(img/true.jpeg);
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position:left;
+  background-color: rgb(255, 96, 255);
+}
+.image-8:hover {
+  height:100%;
+  background-image: url(img/animalcrossing.jpeg);
+  background-size: 20%;
+  background-repeat: no-repeat;
+  background-position:right;
+  background-color: rgb(252, 42, 206)
+}
+.image-9:hover {
+  height:100%;
+  background-image: url(img/fromsam.jpeg);
+  background-size: 32%;
+  background-repeat: no-repeat;
+  background-position:left;
+  background-color: rgb(252, 156, 231)
+}
+
+a{
+  text-decoration: none;
+  color:blue;
+  
+}
+
+a:hover{
+  text-decoration: none;
+  color:chartreuse;
+  position: relative;
+
+  
+}
+
+p{
+  background-image: url(img/lol2-01.png);
+  height:100px;
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position:bottom;
+  padding-top:50px;
+  padding-bottom:0;
+  margin:0;
+  animation: rotation 2s infinite linear
+}
+
+.rotate {
+  animation: rotation 10s infinite linear;
+}
+h1{
+  color:chartreuse;
+  font-size: 60px;
+  margin: 0%;
+  text-align: center;
+  padding-bottom:30px;
+ }
+ @keyframes rotation {
+    25% {
+      transform: rotate(45deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(-45deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+ 
+
+ @media screen and (max-width: 768px) {
+   body{
+     color:chartreuse;
+     background-color: white;
+   }
+
+   h1 {
+    color:chartreuse;
+   }
+   .image-1:hover {
+    height:100%;
+    background-image: url(img/tiff.JPG);
+    background-size:60%;
+  }
+  
+  .image-2:hover {
+    height:100%;
+    background-image: url(img/ri.JPG);
+    background-size:50%;
+  }
+  
+  .image-3:hover {
+    height:100%;
+    background-image: url(img/idk.GIF);
+    background-size:60%;
+  }
+  .image-4:hover {
+    height:100%;
+    background-image: url(img/beyonce.jpg);
+    background-size:60%;
+  }
+  .image-5:hover {
+    height:100%;
+    background-image: url(img/fromfriends.jpeg);
+    background-size:60%;
+  }
+  .image-6:hover {
+    height:100%;
+    background-image: url(img/luv.jpeg);
+    background-size:50%;
+  }
+  .image-7:hover {
+    height:100%;
+    background-image: url(img/true.jpeg);
+    background-size:60%;
+  }
+  .image-8:hover {
+    height:100%;
+    background-image: url(img/animalcrossing.jpeg);
+    background-size:50%;
+  }
+  .image-9:hover {
+    height:100%;
+    background-image: url(img/fromsam.jpeg);
+    background-size:60%;
+  }
+   
+  
+ }
