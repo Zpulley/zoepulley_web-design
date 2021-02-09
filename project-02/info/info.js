@@ -54,19 +54,15 @@ $(".body").hide();
     
 })
 
-// attempting to make the emoji svg run
-var textPath=document.querySelector('#emoji-curve');
+// hamburger menu for mobile - this works!
+function myFunction() {
+    var x = document.getElementById("li");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
 
-function updateTextPathOffset(offset){
-    textPath.setAttribute('startOffset',offset);
-}
-
-updateTextPathOffset(50);
-function onScroll(){
-    requestAnimationFrame(function(){
-        updateTextPathOffset(window.scrollX*1.5);
- 
-    });
-}
 
 

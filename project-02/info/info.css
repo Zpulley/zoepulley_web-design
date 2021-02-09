@@ -17,8 +17,9 @@ body {
   background-color:#BBFD00;
   background-image: url("img/478050_10152747034490247_887388286_o.jpg");
   background-repeat: no-repeat;
-  background-size: 30%;
+  background-size: 40%;
   background-position: bottom right;
+
  
 }
 
@@ -38,18 +39,21 @@ p{
   position: absolute;
   width:55%;
   font-size: 30px;
-  padding-left:30px;
+  line-height: 35px;
+  padding-left:60px;
   padding-top:80px;
   line-height: 1.2;
   list-style-type: none;
   color:black;
-  cursor: url("img/thumbemoji.png") pointer;
+  max-width:585px;
+  
 /* can't get the custom cursors to run */
  
 }
 
 p:hover{
   color:blue;
+  cursor: url("img/thumbemoji.png") pointer;
   
 }
 
@@ -88,6 +92,10 @@ cursor: url("img/angel.png"), pointer;
 }
 
 
+#myLinks > a {
+  display: block;
+}
+
 
 a {
   background: linear-gradient(to bottom, var(--mainColor) 0%, var(--mainColor) 100%);
@@ -108,5 +116,78 @@ a:hover {
   color:#0000ff;
 
 }
+.topnav {
+  background-color: #333;
+  display: none;
+  background: black;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+}
+
+.topnav a {
+  color: #BBFD00;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a:hover {
+  background-color: #BBFD00;
+  color: black;
+}
+.active {
+  background-color: white;
+  color: #BBFD00;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url("img/478050_10152747034490247_887388286_o.jpg");
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: bottom right;
+  
+   
+  }
+  p{
+    position: absolute;
+    width:55%;
+    font-size: 16px;
+    line-height: 35px;
+    padding-left:10px;
+    padding-top:0px;
+    line-height: 1.2;
+
+    color:black;
+    
+
+  }
+  .social {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    width: 50%;
+    top: 0;
+    height: 20%;
+    padding-left: 0;
+  }
+
+  .topnav {
+    display: inline-block;
+  }
 
 
+  li{
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+  }
+}
+ 
+ 
