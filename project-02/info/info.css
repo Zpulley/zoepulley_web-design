@@ -31,31 +31,25 @@ body {
 
 }
 
-.bio{
-  display:flex;
-  justify-items:flex-start;
-  width: 50%;
-  height:100vh;
-  margin:0;
-
-}
 
 
 
 .info{
   position: absolute;
   width:55%;
+  height:calc(100% - 120px);
   font-size: 30px;
   line-height: 35px;
   padding-left:60px;
-  padding-top:180px;
+  bottom:0px;
   line-height: 1.2;
   list-style-type: none;
   color:black;
   max-width:620px;
   text-decoration: none;
+  padding-top:100px;
   
-/* can't get the custom cursors to run */
+
  
 }
 
@@ -246,20 +240,22 @@ cursor: url("img/angel.png"), pointer;
   
    
   }
-  p{
+  .info{
     position: absolute;
     width:80%;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 35px;
     padding-left:8px;
-    padding-top:50px;
     line-height: 1.2;
     color:black;
     padding-left:20px;
-    
+    height: calc(100% - 70px);
+    padding-top: 0;
+    margin: 0;
     
 
   }
+ 
 
   .pic{
     width:100vw;

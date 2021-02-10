@@ -81,6 +81,10 @@ body {
      animation: ticker 20s linear infinite;
 }
 
+.logo{
+  width:100%;
+}
+
 .divbutton{
   /* commented out the display: block bc things are display: block by default */
   /* display: block; */
@@ -126,4 +130,7 @@ a:hover {
 }
 
 
- 
+
+@media screen and (max-width: 768px) {
+
+}
