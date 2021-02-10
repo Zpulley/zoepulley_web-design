@@ -26,6 +26,9 @@ body {
   width: 100vw;
   height:100vh;
   background-color:#BBFD00;
+  background-image: url(img/spongebob.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
 
 }
 
@@ -189,7 +192,7 @@ a:hover {
     font-size: 30px;
     padding-left:20px;
     padding-right:80px;
-    padding-top:420px;
+    padding-top:150px;
     line-height: 1.2;
     overflow: hidden;
   
