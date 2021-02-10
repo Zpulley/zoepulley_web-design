@@ -43,7 +43,6 @@ body {
   text-decoration: none;
   font-size: 17px;
   display: block;
-  background-color: black;
 }
 
 .topnav a:hover {
@@ -99,8 +98,6 @@ a{
   width:100%;
   padding:10px;
   max-width: 180px;
-  background-color:black;
-  z-index: 2;
   
 }
 
@@ -111,7 +108,6 @@ a{
   transform:rotate(-25deg);
   top:0;
   left:0;
-  z-index: 100;
 
 }
 .logo:hover {
@@ -184,24 +180,17 @@ a{
   flex-direction: column;
   align-items:center;
   justify-content:center;
-  /* height: calc(100% - 60px); */
-  /* updated height to account for BOTH the top and bottom tickers (60px x2 aka 120px) */
-  height: calc(100% - 120px);
+  height: calc(100% - 60px);
   width: 80%;
-   /* added this to make sure it doesn't cut into the ticker at the top. 60px is the height of the ticker */
-   top: 60px;
+  
+
 }
 
 .hero{
   width: 80%; 
-/* added height to make it fit within the .process-image container */
-  height: 100%;
 }
 .hero > img {
   width: 100%;
-  /* added this stuff to make sure the image always fits within its container */
-  height: 100%;
-  object-fit: contain;
 }
 
 .hero:hover {
@@ -224,52 +213,26 @@ a{
 }
 .ticker-move-top {
   display: inline-block;
-  white-space: nowrap;
-  padding-top:10px;
-
-  /* added a position: absolute, which fixes the problem of the duplicated ticker starting at the next line */
-  position: absolute;
-  top: 0;
-  animation: ticker-top 30s linear infinite;
-  animation-delay: -15s;
-  
+  white-space:nowrap;
 }
-.ticker-move-top2 {
-  display: inline-block;
-  white-space: nowrap;
-  position: absolute;
-  top: 0;
-  transform: translate(100%);
-  /* I've set the delay to be 5s (half of the full animation duration) bc we want this ticker to start getting into position while the first ticker is still on the page, not after it's been translated all the way out */
-  animation: ticker-top-two 30s linear infinite;
-  padding-top:10px;
-
-  
-}
-
 @keyframes ticker-top {
-  0% { transform: translate(100%); }
-  100% { transform: translate(-100%); }
-}
-
-@keyframes ticker-top-two {
-  0% { transform: translate(100%); }
-  100% { transform: translate(-100%); }
+  0% { transform: translate(-100%); }
+  100% { transform: translate(100%); }
 }
 .ticker-item-top:hover {
   animation-play-state:paused;
 }
 .ticker-item-top {
-  display:inline;
   display:-ms-inline-flexbox;
-  font-size: 30px;
+  font-size: 40px;
   font-family: 'Lazord-Bold'; 
   color: rgb(0, 0, 0);
   margin-top: 12px;
   text-transform:lowercase;
   letter-spacing: 2px;  
-  /* animation: ticker-top 10s linear infinite; */
+  animation: ticker-top 30s linear infinite;
 }
+
 
 
 
@@ -291,7 +254,6 @@ a{
 .ticker-move {
   display: inline-block;
   white-space:nowrap;
-  
 }
 @keyframes ticker {
   0% { transform: translate(100%); }
@@ -347,43 +309,15 @@ a{
   #myLinks {
     display: none;
     position: absolute;
-    right: 10px;
-    top: 50%;
-    background-color: black;
-    padding-left:10px;
-    font-size: 20px;
-    
+    right: 0;
+    top: 100%;
   }
 
   .process-image {
     width: 100%;
-    top: 55px;
   }
-
-.ticker-item-top {
-  display:inline;
-  display:-ms-inline-flexbox;
-  font-size: 22px;
-  font-family: 'Lazord-Bold'; 
-  color: rgb(0, 0, 0);
-  margin-top: 12px;
-  text-transform:lowercase;
-  letter-spacing: 2px;  
-  /* animation: ticker-top 10s linear infinite; */
-}
-
-.ticker-item {
-  display:-ms-inline-flexbox;
-  font-size: 24px;
-  font-family: 'Lazord-Bold'; 
-  color: rgb(0, 0, 0);
-  margin-top: 16px;
-  text-transform:lowercase;
-  letter-spacing: 2px;  
-  animation: ticker 20s linear infinite;
-  animation-delay: -2s;
-}
-
  
+  #text-container{
+  display:none;  }
 }
  
